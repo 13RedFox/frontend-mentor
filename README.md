@@ -1,3 +1,4 @@
-frontend-mentor
+# Repositories: frontend-mentor
 
-Практика верстки с помощью (HTML, CSS, JS).
+# Practice using HTML, CSS, JS.
+# Gaining experience in the field of front-end!
