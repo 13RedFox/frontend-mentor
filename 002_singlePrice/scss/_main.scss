@@ -1,0 +1,80 @@
+$styles: header;
+.#{$styles} {
+  padding: 20px 0;
+  &__title {
+    @include text-styling(24px, 600, $cyan);
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    @include text-styling(20px, 400, $brightYellow);
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    @include text-styling(18px, 400, $grayishBlue);
+  }
+
+  // Header First Card
+  &__first {
+    background: $cyan;
+    padding: 30px 15px;
+
+    &-title {
+      @include text-styling(22px, 400, $white);
+      text-align: left;
+      margin-bottom: 15px;
+    }
+
+    &-price {
+      @include text-styling(34px, 600, $white);
+      line-height: 1;
+      margin-bottom: 10px;
+
+      span {
+        @include text-styling(18px, 400, $lightGray);
+        margin-left: 10px;
+      }
+    }
+
+    &-text {
+      @include text-styling(20px, 400, $white);
+      margin-bottom: 25px;
+    }
+
+    &-btn {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include text-styling(20px, 400, $white);
+      text-transform: capitalize;
+      background: $brightYellow;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0 0px 3px 1px rgba($black, 0.2);
+      padding: 10px 0;
+
+      @media screen and(min-width: 768px) {
+        max-width: 300px;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  // Header Second Card
+  &__second {
+    background: rgba($cyan, 0.6);
+    padding: 30px 15px;
+
+    &-title {
+      @include text-styling(24px, 400, $white);
+      text-transform: capitalize;
+      margin-bottom: 20px;
+    }
+
+    &-item {
+      @include text-styling($base-size, 400, $lightGray);
+    }
+  }
+}
