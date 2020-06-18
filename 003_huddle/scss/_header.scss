@@ -1,0 +1,10 @@
+$style: header;
+.#{$style} {
+  background: hsl(193, 100%, 96%);
+  min-height: 100vh;
+
+  &__logo {
+    display: block;
+    width: 150px;
+  }
+}
