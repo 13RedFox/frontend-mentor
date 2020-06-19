@@ -1,0 +1,68 @@
+@mixin text-styling($size, $weight: 400, $color: black) {
+  font: {
+    size: $size;
+    weight: $weight;
+  }
+  color: $color;
+}
+
+@mixin flex-row($justify: flex-start, $align: flex-start) {
+  display: flex;
+  flex-direction: row;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin flex-col($justify: flex-start, $align: flex-start) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin padding-hack($padding: 50%, $size: cover, $dev: false) {
+  position: relative;
+  height: 0;
+  padding-bottom: $padding;
+  @if $dev {
+    background-color: red;
+  }
+  img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: $size;
+    @if $dev {
+      object-fit: contain;
+    }
+  }
+}
+
+@mixin transition($types...) {
+  transition-property: $types;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  @content;
+}
+
+@mixin svg($size: 16px, $color: black) {
+  width: $size;
+  height: $size;
+  fill: $color;
+  transition-property: fill, opacity;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  flex-shrink: 0;
+  @content;
+}
+
+@mixin mq($size) {
+  @media screen and (min-width: $size) {
+    @content;
+  }
+}
